@@ -19,3 +19,14 @@ def sales_reports(log_file):
 
 # Invoke the function that was just created and pass throught the opened document as the argument.
 sales_reports(log_file)
+
+# Extra credit
+log_file.seek(0)
+
+def melon_orders(log_file):
+    for line in log_file:
+        lineSplit = line.strip().split(' ')
+        if int(lineSplit[2]) > 10:
+            print(line)
+
+melon_orders(log_file)
